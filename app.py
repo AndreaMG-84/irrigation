@@ -10,7 +10,7 @@ st.set_page_config(page_title="Riego Inteligente", page_icon="💧")
 # --- Funciones de Carga de Modelos y Preprocesadores ---
 # Define the folder path where models are saved
 # IMPORTANT: Adjust this path if your models are in a different location in your GitHub repo!
-folder_path = './Despliegue' # Assuming 'Despliegue' folder is in the root of your repo
+folder_path = '.' # Assuming 'Despliegue' folder is in the root of your repo
 
 @st.cache_resource
 def load_resources():
