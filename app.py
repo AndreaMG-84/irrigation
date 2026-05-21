@@ -16,20 +16,17 @@ folder_path = '.' # Assuming 'Despliegue' folder is in the root of your repo
 def load_resources():
     try:
         # Cargar el modelo
-        model_path = os.path.join(folder_path, 'bagging_classifier_model.joblib')
-        bagging_classifier_model = joblib.load(model_path)
+        bagging_classifier_model = joblib.load('bagging_classifier_model.joblib')
 
         # Cargar el OneHotEncoder
-        onehot_encoder_path = os.path.join(folder_path, 'onehot_encoder.joblib')
-        onehot_encoder = joblib.load(onehot_encoder_path)
+        onehot_encoder = joblib.load('onehot_encoder.joblib')
 
         # Cargar el MinMaxScaler
-        minmax_scaler_path = os.path.join(folder_path, 'minmax_scaler.joblib')
-        minmax_scaler = joblib.load(minmax_scaler_path)
+        minmax_scaler = joblib.load('minmax_scaler.joblib')
 
         # Cargar el LabelEncoder (para la variable objetivo)
-        label_encoder_path = os.path.join(folder_path, 'label_encoder.joblib')
-        label_encoder = joblib.load(label_encoder_path)
+
+        label_encoder = joblib.load('label_encoder.joblib')
 
         return bagging_classifier_model, onehot_encoder, minmax_scaler, label_encoder
     except Exception as e:
